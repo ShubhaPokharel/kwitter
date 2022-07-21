@@ -56,7 +56,7 @@ function updateLike(message_id) {
     console.log("clicked on like button - " + message_id);
     button_id = message_id;
     likes = document.getElementById(button_id).value;
-    updates_likes - Number(likes) + 1;
+    updates_likes = Number(likes) + 1;
     console.log(updates_likes);
     firebase.database().ref(room_name).child(message_id).update({
         like:updates_likes
